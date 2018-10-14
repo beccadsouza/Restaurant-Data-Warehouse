@@ -1,0 +1,61 @@
+item_id,name,price,type,prep_time
+I001,Veg Manchurian Dry,145,Starter,15
+I002,Veg Crispy,165,Starter,20
+I003,Veg 65 Dry,155,Starter,20
+I004,Veg Spring Roll,155,Starter,25
+I005,Chinese Bhel,105,Starter,15
+I006,Mushroom Chilli Dry,170,Starter,25
+I007,Paneer Sathe,210,Starter,25
+I008,Veg Hot Pan,190,Starter,25
+I009,Paneer in Hot Garlic Sauce,210,Starter,25
+I010,Paneer Schezwan Dry,200,Starter,20
+I011,Paneer Tikka,210,Starter,25
+I012,Cheese Tikka,290,Starter,25
+I013,Veg Platter,500,Starter,30
+I014,Veg Khasta Kabab,240,Starter,20
+I015,Stuff Mushroom Kabab,220,Starter,25
+I016,Paneer Pasanda,195,Main Course,30
+I017,Chana Masala,155,Main Course,30
+I018,Palak Mutter,115,Main Course,30
+I019,Mix Veg.,165,Main Course,30
+I020,Veg Diwani Handi,155,Main Course,35
+I021,Veg Kadhai,195,Main Course,30
+I022,Paneer Butter Masala,175,Main Course,35
+I023,Mushroom Kadai,195,Main Course,35
+I024,Paneer Handi,185,Main Course,30
+I025,Makai Palak,155,Main Course,40
+I026,Veg Jalfrazi,135,Main Course,40
+I027,Bhindi Fry,135,Main Course,30
+I028,Paneer Tikka Masala,195,Main Course,30
+I029,Paneer Makhanwala,195,Main Course,30
+I030,Dal Fry,130,Main Course,30
+I031,Dal Tadka,145,Main Course,30
+I032,Dal Makhani,180,Main Course,30
+I033,Veg Kofta,150,Main Course,40
+I034,Paneer Shahi Kurma,175,Main Course,40
+I035,Kaju Makhanwala,200,Main Course,40
+I036,Veg Maharaja,280,Main Course,40
+I037,Roti,20,Bread,10
+I038,Naan,30,Bread,10
+I039,Missi Roti,45,Bread,15
+I040,Kulcha,40,Bread,15
+I041,Paratha,45,Bread,15
+I042,Rumali Roti,90,Bread,10
+I043,Puri,50,Bread,10
+I044,Bhature,30,Bread,15
+I045,Cheese Naan,70,Bread,15
+I046,Paneer Paratha ,90,Bread,20
+I047,Garlic Naan,80,Bread,15
+I048,Handi Biryani,150,Rice,30
+I049,Tawa Biryani,155,Rice,35
+I050,Dal Khichdi,130,Rice,25
+I051,Palak Khichdi,130,Rice,30
+I052,Tawa Pulav,150,Rice,35
+I053,Jeera Rice,100,Rice,20
+I054,Steam Rice,90,Rice,15
+I055,Kashmiri Pulav,160,Rice,30
+I056,Veg Matka Dum Biryani,220,Rice,45
+I057,Paneer Matka Biryani,240,Rice,45
+I058,Jain Tawa Pulav,160,Jain,40
+I059,Jain Pav Bhaji,105,Jain,40
+I060,Jain Masala Pav,95,Jain,30
