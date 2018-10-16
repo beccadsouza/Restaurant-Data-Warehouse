@@ -1,46 +1,12 @@
-dataset = [['Milk', 'Onion', 'Nutmeg', 'Kidney Beans', 'Eggs', 'Yogurt'],
-           ['Dill', 'Onion', 'Nutmeg', 'Kidney Beans', 'Eggs', 'Yogurt'],
-           ['Milk', 'Apple', 'Kidney Beans', 'Eggs'],
-           ['Milk', 'Unicorn', 'Corn', 'Kidney Beans', 'Yogurt'],
-           ['Corn', 'Onion', 'Onion', 'Kidney Beans', 'Ice cream', 'Eggs']]
-
+import numpy as np
+from matplotlib.pyplot import tight_layout, ylabel, scatter, show, xlabel, title
 import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules
 pd.options.mode.chained_assignment = None
-oht = TransactionEncoder()
-oht_ary = oht.fit(dataset).transform(dataset)
-df = pd.DataFrame(oht_ary, columns=oht.columns_)
-print(df)
+# import random
 
-frequent_itemsets = apriori(df, min_support=0.6, use_colnames=True)
-print(frequent_itemsets)
-
-
-association_rules(frequent_itemsets, metric="confidence", min_threshold=0.7)
-rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.2)
-print(rules)
-
-support = rules['support']
-confidence = rules['confidence']
-
-import random
-import matplotlib.pyplot as plt
-
-# for i in range(len(support)):
-#     support[i] = support[i] + 0.0025 * (random.randint(1, 10) - 5)
-#     confidence[i] = confidence[i] + 0.0025 * (random.randint(1, 10) - 5)
-
-plt.scatter(support, confidence, alpha=0.5, marker="*")
-plt.title('Association Rules')
-plt.xlabel('support')
-plt.ylabel('confidence')
-plt.show()
-
-import numpy as np
-
-
-def draw_graph( rules, rules_to_show ):
+def draw_graph(rules, rules_to_show):
     import networkx as nx
     G1 = nx.DiGraph()
 
@@ -83,7 +49,33 @@ def draw_graph( rules, rules_to_show ):
     for p in pos:  # raise text positions
         pos[p][1] += 0.07
     nx.draw_networkx_labels(G1, pos)
-    plt.show()
+    show()
 
+dataset = [['Milk', 'Onion', 'Nutmeg', 'Kidney Beans', 'Eggs', 'Yogurt'],
+           ['Dill', 'Onion', 'Nutmeg', 'Kidney Beans', 'Eggs', 'Yogurt'],
+           ['Milk', 'Apple', 'Kidney Beans', 'Eggs'],
+           ['Milk', 'Unicorn', 'Corn', 'Kidney Beans', 'Yogurt'],
+           ['Corn', 'Onion', 'Onion', 'Kidney Beans', 'Ice cream', 'Eggs']]
+oht = TransactionEncoder()
+oht_ary = oht.fit(dataset).transform(dataset)
+df = pd.DataFrame(oht_ary, columns=oht.columns_)
+print(df)
+frequent_itemsets = apriori(df, min_support=0.6, use_colnames=True)
+print(frequent_itemsets)
+association_rules(frequent_itemsets, metric="confidence", min_threshold=0.7)
+_rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.2)
+print(_rules)
+support = _rules['support']
+confidence = _rules['confidence']
+# for i in range(len(support)):
+#     support[i] = support[i] + 0.0025 * (random.randint(1, 10) - 5)
+#     confidence[i] = confidence[i] + 0.0025 * (random.randint(1, 10) - 5)
 
-draw_graph(rules, 6)
+tight_layout(False)
+scatter(support, confidence, alpha=0.5, marker="*")
+title('Association Rules')
+xlabel('support')
+ylabel('confidence')
+show()
+
+draw_graph(_rules, 6)
